@@ -1,3 +1,5 @@
+// 这部分的分支逻辑以及ILLOP什么的没理解
+
 module CPU_PC(clk,PCSrc,ALUOut,JT,ConBA,DatabusA,reset,PC);
 	input ALUOut,clk,reset;  //ALUOut[0]:0->PC+4; 1->ConBA;
 	input[2:0] PCSrc;
@@ -8,8 +10,10 @@ module CPU_PC(clk,PCSrc,ALUOut,JT,ConBA,DatabusA,reset,PC);
 	parameter ILLOP=32'h8000_0004;
 	parameter XADR=32'h8000_0008;
 	assign plus={PC[31],PC[30:0]+31'b000_0000_0000_0000_0000_0000_0000_0100}; //PC+4
+	// 没理解branch信号为什么和ALUOut有关
 	assign branch=ALUOut? ConBA:plus; //branch:1->ConBA; 0->PC+4;
 	initial begin PC=32'b1000_0000_0000_0000_0000_0000_0000_0000; end
+	// 上升沿更新
   always @(posedge clk, posedge reset)
 	 begin
 		if(reset) PC<=32'b1000_0000_0000_0000_0000_0000_0000_0000;

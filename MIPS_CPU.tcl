@@ -181,14 +181,14 @@ if {[string equal [get_filesets -quiet sim_1] ""]} {
 # Set 'sim_1' fileset object
 set obj [get_filesets sim_1]
 set files [list \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/CPU_single_cycletb.v"] \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/CPU_Extendertb.v"] \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/CPU_PCtb.v"] \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/CPU_Controltb.v"] \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/CPU_RAMtb.v"] \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/CPU_clktb.v"] \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/ALUtb.v"] \
- [file normalize "${origin_dir}/../MIPS_CPU/srcbench/CPU_0tb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/CPU_single_cycletb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/CPU_Extendertb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/CPU_PCtb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/CPU_Controltb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/CPU_RAMtb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/CPU_clktb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/ALUtb.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/testbench/CPU_0tb.v"] \
 ]
 add_files -norecurse -fileset $obj $files
 
