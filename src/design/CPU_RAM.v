@@ -5,7 +5,7 @@ module CPU_RAM(clk,reset,switch,Addr,WriteData,MemRd,MemWr,ReadData,led,AN,digit
   output reg[31:0] ReadData;
   output reg[3:0] AN;
   output reg[7:0] digital,led;
-  output inter;
+  output inter;		// 即是IRQ, 判断是否有中断请求
 
 	reg[31:0] RAMDATA[255:0];
 	reg[31:0] TH,TL;
