@@ -146,6 +146,7 @@ set files [list \
  [file normalize "${origin_dir}/../MIPS_CPU/src/design/shift_4.v"] \
  [file normalize "${origin_dir}/../MIPS_CPU/src/design/shift_8.v"] \
  [file normalize "${origin_dir}/../MIPS_CPU/src/design/CPU_0.v"] \
+ [file normalize "${origin_dir}/../MIPS_CPU/src/design/IFID.v"] \
 ]
 add_files -norecurse -fileset $obj $files
 
